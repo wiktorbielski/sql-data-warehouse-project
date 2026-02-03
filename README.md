@@ -10,6 +10,19 @@ The data architecture for this project follows **Medallion Architecture** with B
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
+## 📊 Bronze Layer Tables
+
+The Bronze layer contains raw data ingested from source systems. Below is an overview of the tables created:
+
+| Table name | Source system | Main purpose | Important columns / notes |
+|------------|---------------|--------------|---------------------------|
+| `bronze.crm_cust_info` | CRM | Customer master data | cst_id, name, marital status, gender, create date |
+| `bronze.crm_prd_info` | CRM | Product master data | prd_id, prd_key, cost, product line, start & end date |
+| `bronze.crm_sales_details` | CRM | Sales transactions (fact table) | Order number, product key, customer id, dates as INT64 (!), sales/quantity/price |
+| `bronze.erp_loc_a101` | ERP | Country mapping (location) | Very simple → cid → cntry |
+| `bronze.erp_cust_az12` | ERP | Another customer source (different system) | cid, birth date, gender (gen) |
+| `bronze.erp_px_cat_g1v2` | ERP | Product category hierarchy | id, cat, subcat, maintenan |
+
 ## 📖 Project Overview
 
 This project involves:
@@ -18,6 +31,15 @@ This project involves:
 2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+
+### 🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+
+* SQL Development
+* Data Architect
+* Data Engineering
+* ETL Pipeline Developer
+* Data Modeling
+* Data Analytics
 
 ## 🛠️ Technology Stack
 
