@@ -17,10 +17,10 @@ The Bronze layer contains raw data ingested from source systems. Below is an ove
 | Table name | Source system | Main purpose | Important columns / notes |
 |------------|---------------|--------------|---------------------------|
 | `bronze.crm_cust_info` | CRM | Customer master data | cst_id, name, marital status, gender, create date |
-| `bronze.crm_prd_info` | CRM | Product master data | prd_id, prd_key, cost, product line, start & end date |
-| `bronze.crm_sales_details` | CRM | Sales transactions (fact table) | Order number, product key, customer id, dates as INT64 (!), sales/quantity/price |
-| `bronze.erp_loc_a101` | ERP | Country mapping (location) | Very simple → cid → cntry |
-| `bronze.erp_cust_az12` | ERP | Another customer source (different system) | cid, birth date, gender (gen) |
+| `bronze.crm_prd_info` | CRM | Product master data | prd_id, prd_key, cost, product line, start, end date |
+| `bronze.crm_sales_details` | CRM | Sales transactions | Order number, product key, customer id, dates, sales, quantity, price |
+| `bronze.erp_loc_a101` | ERP | Country mapping | cid, cntry |
+| `bronze.erp_cust_az12` | ERP | Another customer source | cid, birth date, gender |
 | `bronze.erp_px_cat_g1v2` | ERP | Product category hierarchy | id, cat, subcat, maintenan |
 
 ## 📖 Project Overview
