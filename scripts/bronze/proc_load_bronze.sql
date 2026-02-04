@@ -134,7 +134,7 @@ BEGIN
     LOAD DATA OVERWRITE `%s.bronze.erp_loc_a101`
     FROM FILES (
       format = 'CSV',
-      uris = ['gs://%s/source_erp/loc_a101.csv'],
+      uris = ['gs://%s/source_erp/LOC_A101.csv'],
       skip_leading_rows = 1,
       field_delimiter = ','
     )''', project_id, gcs_bucket);
@@ -156,7 +156,7 @@ BEGIN
     LOAD DATA OVERWRITE `%s.bronze.erp_cust_az12`
     FROM FILES (
       format = 'CSV',
-      uris = ['gs://%s/source_erp/cust_az12.csv'],
+      uris = ['gs://%s/source_erp/CUST_AZ12.csv'],
       skip_leading_rows = 1,
       field_delimiter = ','
     )''', project_id, gcs_bucket);
@@ -178,7 +178,7 @@ BEGIN
     LOAD DATA OVERWRITE `%s.bronze.erp_px_cat_g1v2`
     FROM FILES (
       format = 'CSV',
-      uris = ['gs://%s/source_erp/px_cat_g1v2.csv'],
+      uris = ['gs://%s/source_erp/PX_CAT_G1V2.csv'],
       skip_leading_rows = 1,
       field_delimiter = ','
     )''', project_id, gcs_bucket);
